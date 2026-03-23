@@ -36,20 +36,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/auth/**",
-//                                "/patients/**",
                                 "/v3/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
-                                "/api/doctors/**",
-                                "/api/hospital/**",
-                                "/api/admin/**",
-                                "/api/subscriptions/**",
-                                "/api/dashboard/**",
-                                "/api/patient/**",
                                 "/api/**"
                         ).permitAll()
                         .anyRequest().authenticated()
-                )
+                );
 //                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
