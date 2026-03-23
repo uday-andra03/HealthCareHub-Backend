@@ -49,7 +49,7 @@ public class SecurityConfig {
                                 "/api/**"
                         ).permitAll()
                         .anyRequest().authenticated()
-                )
+                );
 //                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
